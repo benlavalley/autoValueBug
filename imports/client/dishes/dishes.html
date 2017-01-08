@@ -1,0 +1,20 @@
+<template name="dishes">
+  <h1>autoValueTest</h1>
+  <button class="insertdish">Click to insert a dish.</button>
+  <hr>
+  {{#each dishes}}
+      <div class="dish">
+        <h3>Dish : {{this.originalTitle}} - created {{this.createdAt}}</h3>
+        <button class="updatedish">Update Dish title</button>
+          <div style="display:block;">
+            <h4>Dish title history:</h4>
+            {{#each this.titleUpdatesHistory}}
+              <div>
+                  <h5>Dish: {{this.content}} - updated on {{this.date}}</h5>
+              </div>
+            {{/each}}
+          </div>
+        <button class="removedish">Remove Dish</button>  
+      </div>  
+  {{/each}}
+</template>
