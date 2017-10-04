@@ -11,7 +11,7 @@ const dishesSchema = new SimpleSchema({
 		autoValue() {
 			if (this.isInsert) {
 				return new Date();
-			} 
+			}
 		}
 	},
 	originalTitle: {
@@ -43,7 +43,6 @@ const dishesSchema = new SimpleSchema({
 	},
 	'titleUpdatesHistory.$': {
 		type: Object,
-		optional: true,
 	},
 	'titleUpdatesHistory.$.date': {
 		type: Date,
